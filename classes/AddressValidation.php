@@ -34,7 +34,7 @@ class AddressValidation
     protected function setError(string $input_field, string $error)
     {
         $this->form_valid = false;
-        array_push($this->errors["$input_field"], $error);
+        $this->errors[$input_field][] = $error;
     }
 
     protected function require(string $input_field, string $input_value)
